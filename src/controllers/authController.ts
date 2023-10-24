@@ -25,7 +25,7 @@ const authController = Router();
  *                 type: string
  *                 description: Sua senha.
  *           example:
- *             username: "usaurio1"
+ *             username: "usuario1"
  *             password: "123456"
  *     responses:
  *       200:
