@@ -1,11 +1,11 @@
-version: "3"
+version: "3.8"
 
 services:
-  mysql:
-    image: mysql:8
-    container_name: mysql
+  postgres:
+    image: postgres:16
+    container_name: postgres
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: hackathon
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-      - "3306:3306"
+      - "5432:5432"
