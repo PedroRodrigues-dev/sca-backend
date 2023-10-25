@@ -3,6 +3,9 @@ import helmet from "helmet";
 import swaggerUi from "swagger-ui-express";
 import { swaggerSpec } from "./configs/swagger";
 import router from "./router";
+import { connectDatabase } from "./configs/database";
+
+connectDatabase();
 
 const app = express();
 
