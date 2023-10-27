@@ -22,6 +22,7 @@ import Visitante from "../entities/Visitante";
 export async function connectDatabase() {
   try {
     const connectionOptions: ConnectionOptions = {
+      name: "default",
       type: "postgres",
       host: DATABASE_HOST,
       port: DATABASE_PORT,

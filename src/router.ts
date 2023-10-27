@@ -1,11 +1,13 @@
 import { Router } from "express";
-import helloController from "./controllers/helloController";
-import authController from "./controllers/authController";
 import { authenticateToken } from "./middlewares/auth";
+import AuthController from "./controllers/AuthController";
+import UsuarioController from "./controllers/UsuarioController";
+import UnidadeController from "./controllers/UnidadeController";
 
 const apiRouter = Router();
 
-apiRouter.use("/v1/auth", authController);
-apiRouter.use("/v1/hello", authenticateToken, helloController);
+apiRouter.use("/v1/auth", AuthController);
+apiRouter.use("/v1/usuarios", authenticateToken, UsuarioController);
+apiRouter.use("/v1/unidades", authenticateToken, UnidadeController);
 
 export default apiRouter;

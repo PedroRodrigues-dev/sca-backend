@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import { Router, Request, Response } from "express";
 import { JWT_SECRET_KEY } from "../configs/env";
 
-const authController = Router();
+const AuthController = Router();
 
 /**
  * @openapi
@@ -31,11 +31,11 @@ const authController = Router();
  *       200:
  *         description: {"token": "your-token"}
  */
-authController.post("/login", (req: Request, res: Response) => {
+AuthController.post("/login", (req: Request, res: Response) => {
   const userId = "1";
 
   const token = jwt.sign({ userId }, JWT_SECRET_KEY, { expiresIn: "1h" });
   res.json({ token });
 });
 
-export default authController;
+export default AuthController;
